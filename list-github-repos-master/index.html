@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+   
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <title>Repository List </title>
+</head>
+
+<body>
+    
+
+    <div id="title">
+        <h1>Enter GitHub Username:</h1>
+        <input id="user" type="text" placeholder="hrishikap">
+        <button id="btn" onclick="getusername()">View Repos</button>
+        <br><i>*Repos may appear at a slower rate compared to other content on screen.</i>
+    </div>
+    <header>
+        <nav>
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/yourusername">Product</a>
+            <a href="https://github.com/yourusername?tab=repositories">open source</a>
+            <a href="https://gist.github.com/yourusername">pricing</a>
+            <a href="https://gist.github.com/yourusername">Solution</a>
+            <!-- Add more links as needed -->
+        </nav>
+    </header>
+
+
+    <div id="back">
+        <a href="index.html">Go Back</a>
+    </div>
+
+    <!-- The div below is all you need to list all repositories-->
+    <div id="repo-box"></div>
+
+
+    <script>
+            document.getElementById("back").style.display = "none";
+            function getusername() {
+                var user = document.getElementById("user").value;
+                document.getElementById("title").style.display = "none";
+                document.getElementById("repo-box").style.display = "block";
+                document.getElementById("back").style.display = "block";
+                genRepo(user);
+            }
+        </script>
+</body>
+
+</html>
+
+</html>
